@@ -194,7 +194,7 @@ $(function() {
 			    saveAs(blob, "HKGingChow.png");
 			});
 		} else {
-			var str = '<img src="'+newCanvas.toDataURL("image/png")+'" width="'+newW+'"><div style="text-align:center;margin-top:10px;color:#000">';
+			var str = '<img src="'+newCanvas.toDataURL("image/png")+'" width="100%"><div style="text-align:center;margin-top:10px;color:#000">';
 			if (isTouch) {
 				str += 'Long press the image to save';
 			} else {
