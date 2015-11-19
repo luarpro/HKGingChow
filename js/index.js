@@ -188,7 +188,7 @@ $(function() {
 		newCtx.drawImage($k('pe_canvas'), 0, 0, newW, newW);
 		newCtx.drawImage($k('hkgcWhite'), 0, 0, newW, newW);
 
-		if (isFileSaverSupported && isIOSChrome) {
+		if (isFileSaverSupported && !isIOSChrome) {
 			newCanvas.toBlob(function(blob) {
 			    saveAs(blob, "HKGingChow.png");
 			});
