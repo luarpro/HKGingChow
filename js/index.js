@@ -4,6 +4,7 @@ $(function() {
 	var canvas = $('#pe_canvas');
 	
 	var isFileSaverSupported = true;
+	var isIOSChrome = false;
 	var is_ie = false;
 	var is_ios = false;
 	var isTouch = false;
@@ -186,13 +187,20 @@ $(function() {
 		newCtx.fill();
 		newCtx.drawImage($k('pe_canvas'), 0, 0, newW, newW);
 		newCtx.drawImage($k('hkgcWhite'), 0, 0, newW, newW);
-		console.log(isFileSaverSupported)
-		if (isFileSaverSupported) {
+
+		if (isFileSaverSupported && isIOSChrome) {
 			newCanvas.toBlob(function(blob) {
 			    saveAs(blob, "HKGingChow.png");
 			});
 		} else {
-			$('#btn_download').attr('href', newCanvas.toDataURL("image/png"))
+			var str = '<img src="'+newCanvas.toDataURL("image/png")+'" width="100%"><div style="text-align:center;margin-top:10px;color:#000">';
+			if (isTouch) {
+				str += 'Long press the image to save';
+			} else {
+				str += 'Right click to save';
+			}
+			str += '</div>';
+			$('#form1').html(str)
 		}
 	}
 	
@@ -223,6 +231,9 @@ $(function() {
 			is_ie = true;
 			$('#btn_browseImgHolder').hide()
 			$('#btn_browse').css({opacity:1,width:'auto',height:'20px'}).addClass('absolute alignCenter valignCenter')
+		}
+		if(ua.match('crios')) {
+			isIOSChrome = true;
 		}
 		if ('ontouchstart' in document.documentElement) {
 			isTouch = true;
