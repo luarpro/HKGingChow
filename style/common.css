@@ -1,0 +1,42 @@
+@-ms-viewport {
+	minimum-scale: 1;
+	maximum-scale: 1;
+	min-zoom: 1;
+	max-zoom: 1;
+}
+* {outline: 0;}
+html {}
+body {
+	background-color:#fff;
+	-ms-touch-action:none;
+	color:#fff;
+	font-family: 'Russo One', Arial, Helvetica, sans-serif;
+	font-size:14px;
+	outline: none;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	-webkit-font-smoothing: antialiased;
+}
+html,body{
+	height:100%; /* needed for container min-height */
+}
+a, .pointer {cursor:pointer;}
+a {color:#000}
+	
+.hideIt {display:none}
+.alignCenter {left:0;right:0;margin-left:auto;margin-right:auto}
+.valignCenter {top:0;bottom:0;margin-top:auto;margin-bottom:auto}
+.floatLeft {float:left}
+.floatRight {float:right}
+.clear {clear:both}
+.sanSerifFont {font-family:Arial, Helvetica, sans-serif;}
+.serifFont {font-family: Georgia, "Times New Roman", Times, serif, Arial, Helvetica, sans-serif;}
+.italicFont {font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;}
+body {font-family:"Microsoft JhengHei","Heiti TC","微軟正黑體","華康粗黑體","黑體","SimHei","Arial Unicode MS","Arial";}
+.bg {background-size:100% 100%!important;}
+.preload {background-repeat:no-repeat}
+.relative {position:relative;}
+.absolute {position:absolute;}
+.fixed {position:fixed;}
+.loading {background-image:url(../images/loading.gif);width:32px;height:32px;display:none}
+.fixedWidth {width:100%;max-width:720px;}
+textarea:focus, input:focus{outline: 0;}

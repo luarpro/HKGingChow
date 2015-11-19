@@ -1,0 +1,14 @@
+#form1 {text-align:center}
+#pe_wrapper {
+	background-color:#000;
+	color:#fff;
+}
+#pe_wrapper.picLoading {background:url(../../images/loading.gif) center center no-repeat;background-size:32px 32px}
+#btn_browseImgHolder {text-align:center;height:30px;width:100%;pointer-events:none;font-size:1.5em}
+#canvasNotSupport {height:30px;text-align:center;width:80%}
+#canvasNotSupport a {color:#0ff;text-decoration:underline;}
+#inApp {width:60%;margin-top:10px;font-size:0.7em;margin-top:15px;color:#ededed}
+#btn_browse {width:100%;height:100%;filter:alpha(opacity=0);-webkit-opacity:0;-moz-opacity:0;opacity:0;left:0;top:0}
+#help {color:#000;margin:10px auto;font-size:1.2em}
+#hkgcWhite {left:0;top:0;pointer-events:none}
+#btn_download {width:100px;color:#000;font-size:1.3em;text-decoration:none}
