@@ -181,6 +181,9 @@ $(function() {
 		newCanvas.width = newW;
 		newCanvas.height = newW;
 		var newCtx = newCanvas.getContext('2d');
+		newCtx.rect(0,0,newW,newW);
+		newCtx.fillStyle="black";
+		newCtx.fill();
 		newCtx.drawImage($k('pe_canvas'), 0, 0, newW, newW);
 		newCtx.drawImage($k('hkgcWhite'), 0, 0, newW, newW);
 		console.log(isFileSaverSupported)
