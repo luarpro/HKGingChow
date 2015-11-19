@@ -196,7 +196,7 @@ $(function() {
 		} else {
 			var str = '<img src="'+newCanvas.toDataURL("image/png")+'" width="100%"><div style="text-align:center;margin-top:10px;color:#000">';
 			if (isTouch) {
-				str += 'Long press the image to save';
+				str += 'Long press the image to save (If you cannot save the image, please launch external browser and try again)';
 			} else {
 				str += 'Right click to save';
 			}
