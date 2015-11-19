@@ -4,6 +4,7 @@ $(function() {
 	var canvas = $('#pe_canvas');
 	
 	var isFileSaverSupported = true;
+	var isInApp = false;
 	var isAndroid = false;
 	var isIOSChrome = false;
 	var is_ie = false;
@@ -196,7 +197,10 @@ $(function() {
 		} else {
 			var str = '<img src="'+newCanvas.toDataURL("image/png")+'" width="100%"><div style="text-align:center;margin-top:10px;color:#000">';
 			if (isTouch) {
-				str += 'Long press the image to save (If you cannot save the image, please launch external browser and try again)';
+				str += 'Long press the image to save';
+				if (isInApp) {
+					str += ' (If you cannot save the image, please launch external browser and try again)'
+				}
 			} else {
 				str += 'Right click to save';
 			}
@@ -226,6 +230,7 @@ $(function() {
 			is_ios = true;
 		}
 		if (ua.match(/FB/)) {
+			isInApp = true;
 			$('#inApp').show();
 		}
 		if (ua.match(/Trident\/7\./)) {
